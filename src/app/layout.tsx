@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {dm_sans} from "@/styles/fonts";
-import Nav from "@/ui/Nav";
+import Header from "@/ui/Header/Header";
 
 export const metadata: Metadata = {
   title: "",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm_sans.className}`}>
-        <Nav />
+        <Header />
         <main>{children}</main>
       </body>
     </html>
