@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+@mixin preset1 {
+  font-size: $font-3xl;
+  font-weight: $font-bold;
+  line-height: $lh-120;
+  letter-spacing: $ls-04;
+}
+
+@mixin preset2 {
+  font-size: $font-2xl;
+  font-weight: $font-bold;
+  line-height: $lh-125;
+  letter-spacing: $ls-035;
+}
+
+@mixin preset3 {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+  line-height: $lh-105;
+}
+
+@mixin preset4 {
+  font-size: $font-lg;
+  font-weight: $font-bold;
+  line-height: $lh-140;
+}
+
+@mixin preset5b {
+  font-size: $font-base;
+  font-weight: $font-bold;
+  line-height: $lh-135;
+  letter-spacing: $ls-025;
+}
+
+@mixin preset5r {
+  font-size: $font-base;
+  font-weight: $font-reg;
+  line-height: $lh-165;
+}
+
+@mixin preset6 {
+  font-size: $font-sm;
+  font-weight: $font-reg;
+  line-height: $lh-130;
+}
+
+@mixin preset7 {
+  font-size: $font-xs;
+  font-weight: $font-bold;
+  line-height: $lh-135;
+  letter-spacing: $ls-02;
+}
