@@ -29,6 +29,9 @@
   transition: all 350ms ease-out;
   top: 4.5rem;
   @include t.preset5b;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .dropdownOpen {
@@ -36,7 +39,8 @@
 }
 
 .dropdown__list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: v.$sp-250;
   list-style: none;
   padding: 0;
