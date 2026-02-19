@@ -3,38 +3,78 @@
 @use "../../styles/sass/breakpoints" as mq;
 
 .header {
-  background-color: v.$neutral-0;
-  display: flex;
   isolation: isolate;
-  justify-content: space-between;
+  max-width: 1110px;
+  margin-inline: auto;
   padding: v.$sp-350 v.$sp-300;
   position: relative;
-  z-index: 1;
+  @include mq.md {
+    align-items: center;
+    padding: v.$sp-200 v.$sp-500;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.header__bar {
+  background-color: v.$neutral-0;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .header__button {
   background: none;
   border: none;
+  @include mq.md {
+    display: none;
+  }
 }
 
-.dropdown {
+.nav {
   background-color: v.$neutral-0;
   left: 0;
   padding: v.$sp-400;
   position: absolute;
   right: 0;
+  overflow: hidden;
   text-align: center;
   text-transform: uppercase;
-  transform: translateY(-100%);
-  transition: all 350ms ease-out;
   top: 4.5rem;
+  z-index: 1;
   @include t.preset5b;
+
+  @include mq.md {
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    position: static;
+    overflow: visible;
+    @include t.preset7;
+  }
+}
+
+.nav__content {
+  transform: translateY(-125%);
+  transition: all 350ms ease-out;
+  hr {
+    margin-block: v.$sp-250;
+  }
+  @include mq.md {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: v.$sp-500;
+    transform: translate(0);
+    hr {
+      display: none;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
 }
-
-.dropdownOpen {
+.nav__contentOpen {
   transform: translateY(0);
 }
 
@@ -44,10 +84,20 @@
   gap: v.$sp-250;
   list-style: none;
   padding: 0;
+  justify-self: center;
+  @include mq.md {
+    align-items: center;
+    flex-direction: row;
+    gap: v.$sp-250;
+  }
+}
 
-  li:last-child {
-    background-color: v.$neutral-950;
-    color: v.$neutral-0;
-    padding: v.$sp-150;
+.dropdown__cta {
+  background-color: v.$neutral-950;
+  color: v.$neutral-0;
+  display: block;
+  padding: v.$sp-150;
+  @include mq.md {
+    justify-self: end;
   }
 }

@@ -11,8 +11,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <header className={styles.header}>
+    <header className={styles.header}>
+      <div className={styles.header__bar}>
         <Image
           alt=""
           src="../../assets/shared/desktop/logo.svg"
@@ -27,12 +27,11 @@ export default function Header() {
         >
           {open ? <CloseIcon /> : <MenuIcon />}
         </button>
-      </header>
-      <div
-        className={clsx(styles.dropdown, open && styles.dropdownOpen)}
-        aria-hidden={!open}
-      >
-        <nav>
+      </div>
+      <div className={styles.nav} aria-hidden={!open}>
+        <nav
+          className={clsx(styles.nav__content, open && styles.nav__contentOpen)}
+        >
           <ul className={styles.dropdown__list}>
             <li>
               <a>stories</a>
@@ -43,13 +42,11 @@ export default function Header() {
             <li>
               <a>pricing</a>
             </li>
-            <hr />
-            <li>
-              <a className={styles.dropdown__cta}>get an invite</a>
-            </li>
           </ul>
+          <hr />
+          <a className={styles.dropdown__cta}>get an invite</a>
         </nav>
       </div>
-    </>
+    </header>
   );
 }
