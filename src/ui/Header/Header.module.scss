@@ -17,7 +17,7 @@
 }
 
 .header__bar {
-  background-color: v.$neutral-0;
+  // background-color: v.$neutral-0;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -32,7 +32,7 @@
   }
 }
 
-.nav {
+.nav__content {
   background-color: v.$neutral-0;
   left: 0;
   padding: v.$sp-400;
@@ -44,7 +44,6 @@
   top: 4.5rem;
   z-index: 1;
   @include t.preset5b;
-
   @include mq.md {
     grid-column: span 2;
     grid-template-columns: 1fr 1fr;
@@ -53,9 +52,7 @@
     overflow: visible;
     @include t.preset7;
   }
-}
 
-.nav__content {
   transform: translateY(-125%);
   transition: all 350ms ease-out;
   hr {

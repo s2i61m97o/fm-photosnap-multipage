@@ -15,7 +15,7 @@ export default function Header() {
       <div className={styles.header__bar}>
         <Image
           alt=""
-          src="../../assets/shared/desktop/logo.svg"
+          src="../../images/shared/desktop/logo.svg"
           height={16}
           width={170}
         />
