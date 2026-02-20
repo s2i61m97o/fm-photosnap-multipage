@@ -113,6 +113,8 @@
 }
 
 .article__contentDark {
+  position: relative;
+
   h2 {
     color: v.$neutral-0;
   }
@@ -121,5 +123,22 @@
   }
   button {
     color: v.$neutral-0;
+  }
+
+  &::before {
+    content: "";
+    background: v.$g-6;
+    inset-inline: v.$sp-375 60%;
+    height: 6px;
+    top: 0;
+    position: absolute;
+
+    @include mq.sm {
+      inset-inline: unset;
+      inset-block: 0;
+      height: unset;
+      left: 0;
+      width: 6px;
+    }
   }
 }
