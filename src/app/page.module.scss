@@ -25,6 +25,7 @@
   &:first-child,
   &:last-child {
     img {
+      justify-self: end;
       grid-column: 3 / 4;
       @include mq.lg {
         grid-column: 2 / 4;
@@ -73,7 +74,10 @@
   h2 {
     color: v.$neutral-950;
     text-transform: uppercase;
-    @include t.preset2;
+    @include t.heading;
+    @include mq.sm {
+      line-height: v.$lh-120;
+    }
   }
 
   p {
@@ -100,7 +104,7 @@
   @include mq.sm {
     align-self: center;
     grid-column: span 2;
-    padding-inline: v.$sp-700;
+    padding: 0 v.$sp-700;
   }
   @include mq.lg {
     grid-column: span 1;
