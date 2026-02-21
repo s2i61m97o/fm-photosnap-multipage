@@ -1,5 +1,12 @@
 @use "./variables" as *;
 
+@mixin heading {
+  font-size: clamp($font-2xl, 1.1667rem + 3.5556vw, $font-3xl);
+  font-weight: $font-bold;
+  line-height: $lh-120;
+  letter-spacing: clamp($ls-035, 0.1667rem + 0.2222vw, $ls-04);
+}
+
 @mixin preset1 {
   font-size: $font-3xl;
   font-weight: $font-bold;

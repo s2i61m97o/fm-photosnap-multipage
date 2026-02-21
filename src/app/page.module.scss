@@ -2,7 +2,156 @@
 @use "../styles/sass/breakpoints" as mq;
 @use "../styles/sass/typography" as t;
 
-.header {
-  color: v.$g-1;
-  @include t.preset1;
+.article {
+  background-color: v.$neutral-0;
+
+  @include mq.sm {
+    display: grid;
+    grid-template-columns: 7fr 8fr 7fr;
+    grid-template-rows: 1fr;
+  }
+
+  img {
+    @include mq.lg {
+      grid-column: span 2;
+    }
+  }
+  .article__content {
+    @include mq.lg {
+      grid-column: span 1;
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    img {
+      justify-self: end;
+      grid-column: 3 / 4;
+      @include mq.lg {
+        grid-column: 2 / 4;
+      }
+    }
+    .article__content {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      @include mq.lg {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  @include mq.lg {
+    grid-template-columns: 11fr 3fr 11fr;
+  }
+}
+
+.articleDark {
+  background-color: v.$neutral-950;
+}
+
+.article__imgLandscape {
+  height: auto;
+  @include mq.sm {
+    display: none;
+  }
+  @include mq.lg {
+    display: inline;
+  }
+}
+.article__imgPortrait {
+  display: none;
+  height: auto;
+  @include mq.sm {
+    display: inline;
+  }
+  @include mq.lg {
+    display: none;
+  }
+}
+
+.article__content {
+  padding: v.$sp-900 v.$sp-375;
+  h2 {
+    color: v.$neutral-950;
+    text-transform: uppercase;
+    @include t.heading;
+    @include mq.sm {
+      line-height: v.$lh-120;
+    }
+  }
+
+  p {
+    color: rgb(from v.$neutral-950 r g b / 0.6);
+    margin-block: v.$sp-200 v.$sp-300;
+    @include t.preset5r;
+  }
+
+  button {
+    align-items: center;
+    background: none;
+    border: none;
+    color: v.$neutral-950;
+    display: flex;
+    gap: v.$sp-200;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  @include mq.sm {
+    align-self: center;
+    grid-column: span 2;
+    padding: 0 v.$sp-700;
+  }
+  @include mq.lg {
+    grid-column: span 1;
+    padding-inline: v.$sp-1400;
+  }
+}
+
+.article__contentDark {
+  position: relative;
+
+  h2 {
+    color: v.$neutral-0;
+  }
+  p {
+    color: rgb(from v.$neutral-0 r g b / 0.6);
+  }
+  button {
+    color: v.$neutral-0;
+  }
+
+  &::before {
+    content: "";
+    background: v.$g-6;
+    inset-inline: v.$sp-375 60%;
+    height: 6px;
+    top: 0;
+    position: absolute;
+
+    @include mq.sm {
+      inset-inline: unset;
+      inset-block: 0;
+      height: unset;
+      left: 0;
+      width: 6px;
+    }
+  }
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block-end: 2rem;
+
+  @include mq.sm {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mq.lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

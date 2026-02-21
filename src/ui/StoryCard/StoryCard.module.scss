@@ -1,0 +1,91 @@
+@use "../../styles/sass/variables" as v;
+@use "../../styles/sass/typography" as t;
+@use "../../styles/sass/breakpoints" as mq;
+
+.card {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+  transition: all 250ms linear;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &::after {
+    content: "";
+    background: v.$g-6;
+    bottom: 0;
+    height: 6px;
+    inset-inline: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    transition: all 250ms linear;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    cursor: pointer;
+    transform: translateY(calc(-24px));
+    &::after {
+      opacity: 1;
+    }
+    .card__cta {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card_img {
+  aspect-ratio: 1/1;
+  position: absolute;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: 0;
+}
+
+.card__content {
+  bottom: v.$sp-500;
+  left: v.$sp-500;
+  right: v.$sp-500;
+  display: grid;
+  gap: v.$sp-050;
+  color: v.$neutral-0;
+  position: absolute;
+  text-transform: capitalize;
+  z-index: 2;
+
+  hr {
+    margin-block: v.$sp-150 v.$sp-200;
+  }
+}
+
+.card__title {
+  @include t.preset4;
+}
+
+.card__info {
+  @include t.preset6;
+}
+
+.card__cta {
+  color: v.$neutral-0;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include t.preset7;
+}
+
+.card__mask {
+  background: v.$g-1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
