@@ -6,6 +6,7 @@ import CloseIcon from "../Icons/CloseIcon";
 import styles from "./Header.module.scss";
 import {useState} from "react";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,17 +35,25 @@ export default function Header() {
         >
           <ul className={styles.dropdown__list}>
             <li>
-              <a>stories</a>
+              <Link href="" className={styles.dropdown__link}>
+                <span className="visually-hidden">go to all </span>stories
+              </Link>
             </li>
             <li>
-              <a>features</a>
+              <Link href="" className={styles.dropdown__link}>
+                <span className="visually-hidden">check out our </span>features
+              </Link>
             </li>
             <li>
-              <a>pricing</a>
+              <Link href="" className={styles.dropdown__link}>
+                <span className="visually-hidden">see our </span>pricing
+              </Link>
             </li>
           </ul>
           <hr />
-          <a className={styles.dropdown__cta}>get an invite</a>
+          <Link href="" className={styles.dropdown__cta}>
+            get an invite
+          </Link>
         </nav>
       </div>
     </header>

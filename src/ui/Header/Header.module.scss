@@ -91,9 +91,21 @@
 .dropdown__cta {
   background-color: v.$neutral-950;
   color: v.$neutral-0;
+  cursor: pointer;
   display: block;
   padding: v.$sp-150;
+  text-decoration: none;
   @include mq.md {
     justify-self: end;
+  }
+}
+
+.dropdown__link,
+.dropdown__link:visited {
+  cursor: pointer;
+  color: initial;
+  text-decoration: none;
+  &:focus-visible {
+    outline-offset: 10px;
   }
 }
