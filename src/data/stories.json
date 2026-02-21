@@ -3,96 +3,144 @@
     "title": "the mountains",
     "date": "april 16th, 2020",
     "author": "john appleseed",
-    "img": "/images/stories/desktop/mountains.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/mountains.jpg",
+      "mobile": "/images/stories/mobile/mountains.jpg"
+    }
   },
   {
     "title": "sunset cityscapes",
     "date": "april 16th 2020",
     "author": "benjamin cruz",
-    "img": "/images/stories/desktop/cityscapes.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/cityscapes.jpg",
+      "mobile": "/images/stories/mobile/cityscapes.jpg"
+    }
   },
   {
     "title": "18 days voyage",
     "date": "april 11th 2020",
     "author": "alexei borodin",
-    "img": "/images/stories/desktop/18-days-voyage.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/18-days-voyage.jpg",
+      "mobile": "/images/stories/mobile/18-days-voyage.jpg"
+    }
   },
   {
     "title": "architecturals",
     "date": "april 9th 2020",
     "author": "samantha brooke",
-    "img": "/images/stories/desktop/architecturals.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/architecturals.jpg",
+      "mobile": "/images/stories/mobile/architecturals.jpg"
+    }
   },
   {
     "title": "world tour 2019",
     "date": "april 7th 2020",
     "author": "timothy wagner",
-    "img": "/images/stories/desktop/world-tour.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/world-tour.jpg",
+      "mobile": "/images/stories/mobile/world-tour.jpg"
+    }
   },
   {
     "title": "unforeseen corners",
     "date": "april 3rd 2020",
     "author": "william malcolm",
-    "img": "/images/stories/desktop/unforeseen-corners.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/unforeseen-corners.jpg",
+      "mobile": "/images/stories/mobile/unforeseen-corners.jpg"
+    }
   },
   {
     "title": "king on africa: part II",
     "date": "march 29th 2020",
     "author": "tim hillenburg",
-    "img": "/images/stories/desktop/king-on-africa.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/king-on-africa.jpg",
+      "mobile": "/images/stories/mobile/king-on-africa.jpg"
+    }
   },
   {
     "title": "the trip to nowhere",
     "date": "march 21st 2020",
     "author": "felicia rourke",
-    "img": "/images/stories/desktop/trip-to-nowhere.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/trip-to-nowhere.jpg",
+      "mobile": "/images/stories/mobile/trip-to-nowhere.jpg"
+    }
   },
   {
     "title": "rage of the sea",
     "date": "march 19th 2020",
     "author": "mohammed abdul",
-    "img": "/images/stories/desktop/rage-of-the-sea.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/rage-of-the-sea.jpg",
+      "mobile": "/images/stories/mobile/rage-of-the-sea.jpg"
+    }
   },
   {
     "title": "running free",
     "date": "march 16th 2020",
     "author": "michelle",
-    "img": "/images/stories/desktop/running-free.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/running-free.jpg",
+      "mobile": "/images/stories/mobile/running-free.jpg"
+    }
   },
   {
     "title": "behind the waves",
     "date": "march 11th 2020",
     "author": "lamarr wilson",
-    "img": "/images/stories/desktop/behind-the-waves.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/behind-the-waves.jpg",
+      "mobile": "/images/stories/mobile/behind-the-waves.jpg"
+    }
   },
   {
     "title": "calm-waters",
     "date": "march 9th 2020",
     "author": "samantha brooke",
-    "img": "/images/stories/desktop/calm-waters.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/calm-waters.jpg",
+      "mobile": "/images/stories/mobile/calm-waters.jpg"
+    }
   },
   {
     "title": "the milky way",
     "date": "march 5th 2020",
     "author": "benjamin cruz",
-    "img": "/images/stories/desktop/milky-way.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/milky-way.jpg",
+      "mobile": "/images/stories/mobile/milky-way.jpg"
+    }
   },
   {
     "title": "night at the dark forest",
     "date": "march 4th 2020",
     "author": "mohammed abdul",
-    "img": "/images/stories/desktop/dark-forest.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/dark-forest.jpg",
+      "mobile": "/images/stories/mobile/dark-forest.jpg"
+    }
   },
   {
     "title": "somwarpets's beauty",
     "date": "march 1st 2020",
     "author": "michelle",
-    "img": "/images/stories/desktop/somwarpet.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/somwarpet.jpg",
+      "mobile": "/images/stories/mobile/somwarpet.jpg"
+    }
   },
   {
     "title": "land of dreams",
     "date": "february 25th 2020",
     "author": "william malcolm",
-    "img": "/images/stories/desktop/land-of-dreams.jpg"
+    "img": {
+      "desktop": "/images/stories/desktop/land-of-dreams.jpg",
+      "mobile": "/images/stories/mobile/land-of-dreams.jpg"
+    }
   }
 ]

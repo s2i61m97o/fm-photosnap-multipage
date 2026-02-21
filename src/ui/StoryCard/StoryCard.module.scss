@@ -1,0 +1,49 @@
+@use "../../styles/sass/variables" as v;
+@use "../../styles/sass/typography" as t;
+@use "../../styles/sass/breakpoints" as mq;
+
+.card {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+}
+.card_img {
+  aspect-ratio: 1/1;
+  position: absolute;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: 0;
+}
+
+.card__content {
+  bottom: v.$sp-500;
+  left: v.$sp-500;
+  right: v.$sp-500;
+  display: grid;
+  gap: v.$sp-050;
+  color: v.$neutral-0;
+  position: absolute;
+  text-transform: capitalize;
+  z-index: 1;
+
+  hr {
+    margin-block: v.$sp-150 v.$sp-200;
+  }
+}
+
+.card__title {
+  @include t.preset4;
+}
+
+.card__info {
+  @include t.preset6;
+}
+
+.card__link {
+  color: v.$neutral-0;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include t.preset7;
+}
