@@ -26,13 +26,14 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     cursor: pointer;
     transform: translateY(calc(-24px));
     &::after {
       opacity: 1;
     }
-    a {
+    .card__cta {
       text-decoration: underline;
     }
   }
@@ -70,7 +71,7 @@
   @include t.preset6;
 }
 
-.card__link {
+.card__cta {
   color: v.$neutral-0;
   display: flex;
   justify-content: space-between;
