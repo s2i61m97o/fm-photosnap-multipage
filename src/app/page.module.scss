@@ -146,6 +146,7 @@
 .stories {
   display: grid;
   grid-template-columns: 1fr;
+  margin-block-end: 2rem;
 
   @include mq.sm {
     grid-template-columns: 1fr 1fr;

@@ -29,6 +29,8 @@ export default function StoryCard({
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
             className={styles.card__img}
           />
+          <div className={styles.card__mask}></div>
+
           <div className={styles.card__content}>
             {date ? (
               <p className={styles.card_info}>{story.date}</p>
