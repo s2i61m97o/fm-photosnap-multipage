@@ -101,3 +101,13 @@
     justify-self: end;
   }
 }
+
+.dropdown__cta,
+.dropdown__link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown__link:visited {
+  color: initial;
+}
