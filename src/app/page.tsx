@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
 import Image from "next/image";
-import Arrow from "@/ui/Icons/Arrow";
+import {Icons} from "@/ui/Icons";
 import createImgLand from "../../public/images/home/desktop/create-and-share.jpg";
 import beautifulImgLand from "../../public/images/home/desktop/beautiful-stories.jpg";
 import designedImgLand from "../../public/images/home/desktop/designed-for-everyone.jpg";
@@ -44,7 +44,7 @@ export default function Home() {
               others.
             </p>
             <button>
-              get an invite <Arrow />
+              get an invite <Icons.Arrow />
             </button>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
               Then share your story with everyone.
             </p>
             <button>
-              view the stories <Arrow />
+              view the stories <Icons.Arrow />
             </button>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function Home() {
               brands, businesses you name it.
             </p>
             <button>
-              view the stories <Arrow />
+              view the stories <Icons.Arrow />
             </button>
           </div>
         </div>

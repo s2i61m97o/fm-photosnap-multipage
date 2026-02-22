@@ -4,7 +4,7 @@ export default function CloseIcon() {
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="15"
-      aria-hidden
+      aria-hidden="true"
       focusable="false"
     >
       <path

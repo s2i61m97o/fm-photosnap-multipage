@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./StoryCard.module.scss";
-import Arrow from "../Icons/Arrow";
+import {Icons} from "../Icons";
 import stories from "../../data/stories.json";
 
 export default function StoryCard({
@@ -39,7 +39,7 @@ export default function StoryCard({
               <p className={styles.card_info}>by {story.author}</p>
               <hr />
               <span className={styles.card__cta} aria-hidden>
-                read story <Arrow />
+                read story <Icons.Arrow />
               </span>
             </div>
           </a>

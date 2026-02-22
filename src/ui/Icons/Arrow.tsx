@@ -4,7 +4,7 @@ export default function Arrow() {
       xmlns="http://www.w3.org/2000/svg"
       width="43"
       height="14"
-      aria-hidden
+      aria-hidden="true"
       focusable="false"
     >
       <g fill="none" fillRule="evenodd" stroke="currentColor">

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import MenuIcon from "../Icons/MenuIcon";
-import CloseIcon from "../Icons/CloseIcon";
+// import MenuIcon from "../Icons/MenuIcon";
+// import CloseIcon from "../Icons/CloseIcon";
+import {Icons} from "../Icons";
 import styles from "./Header.module.scss";
 import {useState} from "react";
 import clsx from "clsx";
@@ -26,7 +27,7 @@ export default function Header() {
           className={styles.header__button}
           onClick={() => setOpen((prev) => !prev)}
         >
-          {open ? <CloseIcon /> : <MenuIcon />}
+          {open ? <Icons.Close /> : <Icons.Menu />}
         </button>
       </div>
       <div className={styles.nav} aria-hidden={!open}>

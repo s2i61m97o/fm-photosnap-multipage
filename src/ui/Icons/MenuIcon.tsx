@@ -4,7 +4,7 @@ export default function MenuIcon() {
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="6"
-      aria-hidden
+      aria-hidden="true"
       focusable="false"
     >
       <g fillRule="evenodd">
