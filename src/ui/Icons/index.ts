@@ -7,17 +7,27 @@ import Embed from "./Embed";
 import MenuIcon from "./MenuIcon";
 import NoLimit from "./NoLimit";
 import Responsive from "./Responsive";
+import Facebook from "./Facebook";
+import Instagram from "./Instagram";
+import Pinterest from "./Pinterest";
+import Twitter from "./Twitter";
+import Youtube from "./Youtube";
 
 export const Icons = {
-  Arrow: Arrow,
+  Arrow,
   Exposure: BoostExposure,
   Close: CloseIcon,
   Domain: CustomDomain,
-  DragDrop: DragDrop,
-  Embed: Embed,
+  DragDrop,
+  Embed,
   Menu: MenuIcon,
-  NoLimit: NoLimit,
-  Responsive: Responsive,
+  NoLimit,
+  Responsive,
+  Facebook,
+  Instagram,
+  Pinterest,
+  Twitter,
+  Youtube,
 };
 
 export type IconKey = keyof typeof Icons;
