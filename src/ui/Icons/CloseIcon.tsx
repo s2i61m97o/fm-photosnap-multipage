@@ -1,11 +1,12 @@
-export default function CloseIcon() {
+export default function CloseIcon({classname}: {classname?: string}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="15"
-      aria-hidden
+      aria-hidden="true"
       focusable="false"
+      className={classname}
     >
       <path
         fillRule="evenodd"

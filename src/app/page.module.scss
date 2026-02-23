@@ -155,3 +155,13 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.features {
+  box-sizing: content-box;
+  margin: clamp(v.$sp-1000, 2.6145rem + 10.1781vw, v.$sp-1500) auto;
+  max-width: 476px;
+  padding: v.$sp-400;
+  @include mq.lg {
+    max-width: 1110px;
+  }
+}
