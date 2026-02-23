@@ -4,7 +4,7 @@ export default function Facebook() {
       <defs>
         <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
           <stop offset="0%" stop-color="#63AFDB" />
-          <stop offset="100%" stop-color="#6028F1" />
+          <stop offset="100%" stopColor="#6028F1" />
         </linearGradient>
       </defs>
       <path

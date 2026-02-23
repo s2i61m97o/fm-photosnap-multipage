@@ -10,6 +10,7 @@ import designedImgPortrait from "../../public/images/home/tablet/designed-for-ev
 import clsx from "clsx";
 import StoryCard from "../ui/StoryCard/StoryCard";
 import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
+import Footer from "@/ui/Footer/Footer";
 
 export default function Home() {
   return (
@@ -114,6 +115,7 @@ export default function Home() {
       <section className={styles.features}>
         <FeatureGrid displayNum={3} />
       </section>
+      <Footer />
     </>
   );
 }
