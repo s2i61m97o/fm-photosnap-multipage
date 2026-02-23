@@ -9,7 +9,8 @@ interface ImageProp {
   height: number;
   width: number;
   alt: string;
-  orientation: "landscape" | "portrait";
+  orientation: "landscape" | "portrait" | "background";
+  loading?: "eager" | "lazy";
 }
 
 interface ArticleProps {

@@ -24,6 +24,7 @@ export default function Home() {
               width: 830,
               alt: "",
               orientation: "landscape",
+              loading: "eager",
             },
             {
               sizes: "100vw",
@@ -32,6 +33,7 @@ export default function Home() {
               width: 273,
               alt: "",
               orientation: "portrait",
+              loading: "eager",
             },
           ]}
         >
