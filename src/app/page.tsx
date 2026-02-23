@@ -9,6 +9,7 @@ import beautifulImgPortrait from "../../public/images/home/tablet/beautiful-stor
 import designedImgPortrait from "../../public/images/home/tablet/designed-for-everyone.jpg";
 import clsx from "clsx";
 import StoryCard from "../ui/StoryCard/StoryCard";
+import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
 
 export default function Home() {
   return (
@@ -109,6 +110,9 @@ export default function Home() {
       </section>
       <section className={styles.stories}>
         <StoryCard amount={4} />
+      </section>
+      <section className={styles.features}>
+        <FeatureGrid displayNum={3} />
       </section>
     </>
   );

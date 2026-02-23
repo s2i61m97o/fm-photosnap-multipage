@@ -13,7 +13,7 @@ export const Icons = {
   Exposure: BoostExposure,
   Close: CloseIcon,
   Domain: CustomDomain,
-  DrgDrop: DragDrop,
+  DragDrop: DragDrop,
   Embed: Embed,
   Menu: MenuIcon,
   NoLimit: NoLimit,

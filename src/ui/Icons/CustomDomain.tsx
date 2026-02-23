@@ -1,4 +1,4 @@
-export default function CustomDomain() {
+export default function CustomDomain({classname}: {classname?: string}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export default function CustomDomain() {
       height="72"
       aria-hidden="true"
       focusable="false"
+      className={classname}
     >
       <path
         d="M48.628 26.431c-7.611 0-13.804 6.193-13.804 13.804 0 7.612 6.193 13.804 13.804 13.804 7.612 0 13.804-6.192 13.804-13.804 0-7.611-6.192-13.804-13.804-13.804zm0 24.471c-5.882 0-10.667-4.785-10.667-10.667 0-5.881 4.785-10.666 10.667-10.666s10.667 4.785 10.667 10.666c0 5.882-4.785 10.667-10.667 10.667z"
