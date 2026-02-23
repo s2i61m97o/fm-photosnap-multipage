@@ -22,7 +22,10 @@ export default function Header() {
           {open ? <Icons.Close /> : <Icons.Menu />}
         </button>
       </div>
-      <div className={styles.nav} aria-hidden={!open}>
+      <div
+        className={clsx(styles.nav, open && styles.nav__contentOpen)}
+        aria-hidden={!open}
+      >
         <nav
           className={clsx(styles.nav__content, open && styles.nav__contentOpen)}
         >

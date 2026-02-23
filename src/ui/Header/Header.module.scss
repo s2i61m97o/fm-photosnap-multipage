@@ -8,6 +8,7 @@
   margin-inline: auto;
   padding: v.$sp-350 v.$sp-300;
   position: relative;
+  z-index: 1;
   @include mq.md {
     align-items: center;
     padding: v.$sp-200 v.$sp-500;
@@ -19,9 +20,17 @@
 .header__bar {
   background-color: v.$neutral-0;
   display: flex;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: v.$sp-350 v.$sp-300;
   justify-content: space-between;
   z-index: 2;
+  @include mq.md {
+    position: relative;
+    padding: 0;
+  }
 }
 
 .header__button {
@@ -39,25 +48,28 @@
   position: absolute;
   right: 0;
   overflow: hidden;
+  transform: translateY(-100%);
+  transition: all 350ms ease-out;
   text-align: center;
   text-transform: uppercase;
   top: 4.5rem;
   z-index: 1;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
   @include t.preset5b;
-
   @include mq.md {
     grid-column: span 2;
     grid-template-columns: 1fr 1fr;
+    overflow: visible;
     padding: 0;
     position: static;
-    overflow: visible;
+    transform: translate(0);
     @include t.preset7;
   }
 }
 
 .nav__content {
-  transform: translateY(-125%);
-  transition: all 350ms ease-out;
   hr {
     margin-block: v.$sp-250;
   }
@@ -65,13 +77,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: v.$sp-500;
-    transform: translate(0);
     hr {
       display: none;
     }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
   }
 }
 .nav__contentOpen {
