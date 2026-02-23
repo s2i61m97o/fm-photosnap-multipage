@@ -1,5 +1,4 @@
 import styles from "./page.module.scss";
-import Image from "next/image";
 import {Icons} from "@/ui/Icons";
 import createImgLand from "../../public/images/home/desktop/create-and-share.jpg";
 import beautifulImgLand from "../../public/images/home/desktop/beautiful-stories.jpg";
@@ -7,37 +6,36 @@ import designedImgLand from "../../public/images/home/desktop/designed-for-every
 import createImgPortrait from "../../public/images/home/tablet/create-and-share.jpg";
 import beautifulImgPortrait from "../../public/images/home/tablet/beautiful-stories.jpg";
 import designedImgPortrait from "../../public/images/home/tablet/designed-for-everyone.jpg";
-import clsx from "clsx";
 import StoryCard from "../ui/StoryCard/StoryCard";
 import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
+import Article from "@/ui/Article/Article";
 
 export default function Home() {
   return (
     <>
       <section className={styles.hero}>
-        <div className={clsx(styles.article, styles.articleDark)}>
-          <Image
-            sizes="100vw"
-            src={createImgLand}
-            height={650}
-            width={830}
-            alt=""
-            className={styles.article__imgLandscape}
-          />
-          <Image
-            sizes="100vw"
-            src={createImgPortrait}
-            height={600}
-            width={273}
-            alt=""
-            className={styles.article__imgPortrait}
-          />
-          <div
-            className={clsx(
-              styles.article__content,
-              styles.article__contentDark,
-            )}
-          >
+        <Article
+          hero
+          image={[
+            {
+              sizes: "100vw",
+              src: createImgLand,
+              height: 650,
+              width: 830,
+              alt: "",
+              orientation: "landscape",
+            },
+            {
+              sizes: "100vw",
+              src: createImgPortrait,
+              height: 600,
+              width: 273,
+              alt: "",
+              orientation: "portrait",
+            },
+          ]}
+        >
+          <>
             <h2>create and share your photo stories</h2>
             <p>
               Photosnap is a platform for photographers and visual storytellers.
@@ -47,26 +45,29 @@ export default function Home() {
             <button>
               get an invite <Icons.Arrow />
             </button>
-          </div>
-        </div>
-        <div className={styles.article}>
-          <Image
-            sizes="100vw"
-            src={beautifulImgLand}
-            height={650}
-            width={830}
-            alt=""
-            className={styles.article__imgLandscape}
-          />
-          <Image
-            sizes="100vw"
-            src={beautifulImgPortrait}
-            height={600}
-            width={273}
-            alt=""
-            className={styles.article__imgPortrait}
-          />
-          <div className={styles.article__content}>
+          </>
+        </Article>
+        <Article
+          image={[
+            {
+              sizes: "100vw",
+              src: beautifulImgLand,
+              height: 650,
+              width: 830,
+              alt: "",
+              orientation: "landscape",
+            },
+            {
+              sizes: "100vw",
+              src: beautifulImgPortrait,
+              height: 600,
+              width: 273,
+              alt: "",
+              orientation: "portrait",
+            },
+          ]}
+        >
+          <>
             <h2>beautiful stories every time</h2>
             <p>
               We provide design templates to ensure your stories look terrific.
@@ -76,26 +77,30 @@ export default function Home() {
             <button>
               view the stories <Icons.Arrow />
             </button>
-          </div>
-        </div>
-        <div className={styles.article}>
-          <Image
-            sizes="100vw"
-            src={designedImgLand}
-            height={650}
-            width={830}
-            alt=""
-            className={styles.article__imgLandscape}
-          />
-          <Image
-            sizes="100vw"
-            src={designedImgPortrait}
-            height={600}
-            width={273}
-            alt=""
-            className={styles.article__imgPortrait}
-          />
-          <div className={styles.article__content}>
+          </>
+        </Article>
+
+        <Article
+          image={[
+            {
+              sizes: "100vw",
+              src: designedImgLand,
+              height: 650,
+              width: 830,
+              alt: "",
+              orientation: "landscape",
+            },
+            {
+              sizes: "100vw",
+              src: designedImgPortrait,
+              height: 600,
+              width: 273,
+              alt: "",
+              orientation: "portrait",
+            },
+          ]}
+        >
+          <>
             <h2>designed for everyone</h2>
             <p>
               Photosnap can help you create stories that resonate with your
@@ -105,9 +110,10 @@ export default function Home() {
             <button>
               view the stories <Icons.Arrow />
             </button>
-          </div>
-        </div>
+          </>
+        </Article>
       </section>
+
       <section className={styles.stories}>
         <StoryCard amount={4} />
       </section>
