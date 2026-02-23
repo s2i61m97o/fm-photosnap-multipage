@@ -1,35 +1,42 @@
-import Image from "next/image";
 import {Icons} from "../Icons";
 import Link from "next/link";
+import styles from "./Footer.module.scss";
 
 export default function Footer() {
   return (
-    <section>
-      <Image
-        alt=""
-        src="../../images/shared/desktop/logo.svg"
-        height={16}
-        width={170}
-      />
-      <div>
-        <Icons.Facebook />
-        <Icons.Youtube />
-        <Icons.Twitter />
-        <Icons.Pinterest />
-        <Icons.Instagram />
+    <section className={styles.footer}>
+      <Icons.Logo classname={styles.footer__logo} />
+      <div className={styles.footer__socials}>
+        <a aria-label="our facebook page">
+          <Icons.Facebook classname="facebook" />
+        </a>
+        <a aria-label="our youtube channel">
+          <Icons.Youtube />
+        </a>
+        <a aria-label="our twitter feed">
+          <Icons.Twitter />
+        </a>
+        <a aria-label="our Pinterest page">
+          <Icons.Pinterest />
+        </a>
+        <a aria-label="our Instagram profile">
+          <Icons.Instagram />
+        </a>
       </div>
-      <div>
-        <ul>
+      <div className={styles.nav}>
+        <ul className={styles.nav__list}>
           <Link href="">home</Link>
           <Link href="">stories</Link>
           <Link href="">features</Link>
           <Link href="">pricing</Link>
         </ul>
       </div>
-      <Link href="">
+      <Link href="" className={styles.footer__cta}>
         get an invite <Icons.Arrow />
       </Link>
-      <p>Copyright 2019. All Rights Reserved</p>
+      <p className={styles.footer__subtext}>
+        Copyright 2019. All Rights Reserved
+      </p>
     </section>
   );
 }

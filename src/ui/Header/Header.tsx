@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-// import MenuIcon from "../Icons/MenuIcon";
-// import CloseIcon from "../Icons/CloseIcon";
 import {Icons} from "../Icons";
 import styles from "./Header.module.scss";
 import {useState} from "react";
@@ -15,12 +12,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__bar}>
-        <Image
-          alt=""
-          src="../../images/shared/desktop/logo.svg"
-          height={16}
-          width={170}
-        />
+        <Icons.Logo />
         <button
           aria-expanded={open}
           aria-label="toggle navigation menu"
