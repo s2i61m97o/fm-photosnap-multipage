@@ -1,5 +1,5 @@
 import styles from "./Story.module.scss";
-import storyData from "../../data/stories.json";
+import storyData from "../../../data/stories.json";
 import StoryCard from "./StoryCard";
 
 export default function StoryGrid({displayNum}: {displayNum: number}) {

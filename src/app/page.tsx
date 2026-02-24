@@ -1,9 +1,9 @@
 import styles from "./page.module.scss";
-import {Icons} from "@/ui/Icons";
+import {Icons} from "@/components/ui/Icons";
 import {Images} from "@/assets/images/home";
-import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
-import Article from "@/ui/Article/Article";
-import StoryGrid from "@/ui/StoryGrid/StoryGrid";
+import FeatureGrid from "@/components/ui/FeatureGrid/FeatureGrid";
+import Article from "@/components/ui/Article/Article";
+import StoryGrid from "@/components/ui/StoryGrid/StoryGrid";
 
 export default function Home() {
   return (

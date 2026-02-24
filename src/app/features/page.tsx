@@ -1,5 +1,5 @@
-import Article from "@/ui/Article/Article";
-import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
+import Article from "@/components/ui/Article/Article";
+import FeatureGrid from "@/components/ui/FeatureGrid/FeatureGrid";
 import {Images} from "@/assets/images/features";
 import styles from "./page.module.scss";
 

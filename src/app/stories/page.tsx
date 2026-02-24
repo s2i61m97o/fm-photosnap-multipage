@@ -1,7 +1,7 @@
-import Article from "@/ui/Article/Article";
-import StoryGrid from "@/ui/StoryGrid/StoryGrid";
+import Article from "@/components/ui/Article/Article";
+import StoryGrid from "@/components/ui/StoryGrid/StoryGrid";
 import stories from "@/data/stories.json";
-import {Icons} from "@/ui/Icons";
+import {Icons} from "@/components/ui/Icons";
 import styles from "./page.module.scss";
 
 export default function Stories() {

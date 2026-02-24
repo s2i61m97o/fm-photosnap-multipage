@@ -1,4 +1,4 @@
-import {Icons} from "../Icons";
+import {Icons} from "../../ui/Icons";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import {Icons} from "../Icons";
+import {Icons} from "../../ui/Icons";
 import styles from "./Header.module.scss";
 import {useState} from "react";
 import clsx from "clsx";
