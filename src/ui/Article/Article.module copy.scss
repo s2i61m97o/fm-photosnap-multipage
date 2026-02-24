@@ -4,86 +4,89 @@
 
 .article {
   background-color: v.$neutral-0;
+
   @include mq.sm {
     display: grid;
+    grid-template-columns: 7fr 8fr 7fr;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+
+  img {
+    @include mq.lg {
+      grid-column: span 2;
+    }
+  }
+  .article__content {
+    @include mq.lg {
+      grid-column: span 1;
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    .article__imgLandscape,
+    .article__imgPortrait {
+      justify-self: end;
+      grid-column: 3 / 4;
+      @include mq.lg {
+        grid-column: 2 / 4;
+      }
+    }
+    .article__content {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      @include mq.lg {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  @include mq.lg {
+    grid-template-columns: 11fr 3fr 11fr;
   }
 }
 
 .hero {
   background-color: v.$neutral-950;
+  position: relative;
 }
 
-.article__imageRight {
-  grid-template-areas: "content img";
-  grid-template-columns: 7fr 3fr;
-
+.article__imgLandscape {
+  height: auto;
+  position: relative;
+  @include mq.sm {
+    display: none;
+  }
   @include mq.lg {
-    grid-template-columns: 6fr 4fr;
+    display: inline;
   }
 }
-.article__imageLeft {
-  grid-template-columns: 3fr 7fr;
-  grid-template-areas: "img content";
+.article__imgPortrait {
+  display: none;
+  height: auto;
+  position: relative;
+  @include mq.sm {
+    display: inline;
+  }
   @include mq.lg {
-    grid-template-columns: 4fr 6fr;
+    display: none;
   }
 }
 
-.article__imageBackground {
-  grid-template-columns: calc(402px + calc(2 * v.$sp-700)) auto;
-  grid-template-areas: "content .";
-  @include mq.lg {
-    grid-template-columns: calc(402px + calc(2 * v.$sp-1400)) auto;
-  }
-}
-
-.article__img {
-  grid-area: img;
-  object-fit: cover;
+.article__imgBackground {
+  // display: none;
   object-position: top;
-  width: 100%;
-}
-
-.img__sm {
-  @include mq.sm {
-    display: none;
-  }
-}
-
-.img__md {
-  display: none;
+  object-fit: cover;
   @include mq.sm {
     display: block;
-  }
-  @include mq.lg {
-    display: none;
-  }
-}
-
-.img__lg {
-  display: none;
-  @include mq.lg {
-    display: block;
-  }
-}
-
-.img__background {
-  @include mq.sm {
+    grid-column: 1 / 4;
     position: absolute;
   }
 }
 
 .article__content {
-  grid-area: content;
   padding: v.$sp-900 v.$sp-375;
-  @include mq.sm {
-    align-self: center;
-    padding: v.$sp-900 v.$sp-700;
-  }
-  @include mq.lg {
-    padding-inline: v.$sp-1400;
-  }
-
   h2 {
     color: v.$neutral-950;
     text-transform: uppercase;
@@ -112,6 +115,16 @@
       cursor: pointer;
       text-decoration: underline;
     }
+  }
+
+  @include mq.sm {
+    align-self: center;
+    grid-column: span 2;
+    padding: 0 v.$sp-700;
+  }
+  @include mq.lg {
+    grid-column: span 1;
+    padding-inline: v.$sp-1400;
   }
 }
 

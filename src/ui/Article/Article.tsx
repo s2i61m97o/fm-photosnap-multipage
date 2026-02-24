@@ -4,13 +4,13 @@ import Image, {StaticImageData} from "next/image";
 import clsx from "clsx";
 
 interface ImageProp {
-  sizes: string;
+  size: string;
   src: StaticImageData | string;
   height?: number;
   width?: number;
   fill?: boolean;
   alt: string;
-  orientation: "landscape" | "portrait" | "background";
+  position: "Left" | "Right" | "Background";
   loading?: "eager" | "lazy";
 }
 
@@ -18,25 +18,28 @@ interface ArticleProps {
   children: JSX.Element;
   image: ImageProp[];
   hero?: true;
-  colorStrip?: boolean;
 }
 
-export default function Article({
-  children,
-  image,
-  hero,
-  colorStrip = true,
-}: ArticleProps) {
+export default function Article({children, image, hero}: ArticleProps) {
   return (
-    <div className={clsx(styles.article, hero && styles.hero)}>
+    <div
+      className={clsx(
+        styles.article,
+        hero && styles.hero,
+        styles[`article__image${image[0].position}`],
+      )}
+    >
       {image.map((img, index) => (
         <Image
           key={index}
-          {...img}
+          src={img.src}
+          alt={img.alt}
+          width={img.width}
+          height={img.height}
           className={clsx(
-            img.orientation === "landscape" && styles.article__imgLandscape,
-            img.orientation === "portrait" && styles.article__imgPortrait,
-            img.orientation === "background" && styles.article__imgBackground,
+            styles[`img__${img.size}`],
+            styles.article__img,
+            img.position === "Background" && styles.img__background,
           )}
         />
       ))}
@@ -44,7 +47,7 @@ export default function Article({
         className={clsx(
           styles.article__content,
           hero && styles.hero__content,
-          !colorStrip && styles.hero__removeColor,
+          image[0].position === "Background" && styles.hero__removeColor,
         )}
       >
         {children}

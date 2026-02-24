@@ -29,4 +29,8 @@
   display: flex;
   gap: v.$sp-200;
   text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }

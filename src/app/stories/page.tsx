@@ -11,25 +11,34 @@ export default function Stories() {
     <>
       <Article
         hero
-        colorStrip={false}
         image={[
           {
-            sizes: "100vw",
+            size: "lg",
             src: featureStory.img.desktop,
             alt: "",
-            orientation: "background",
+            position: "Background",
             loading: "eager",
-            fill: true,
+            width: 1440,
+            height: 650,
           },
-          // {
-          //   sizes: "100vw",
-          //   src: featureStory.img.mobile,
-          //   width: 768,
-          //   height: 650,
-          //   alt: "",
-          //   orientation: "landscape",
-          //   loading: "eager",
-          // },
+          {
+            size: "md",
+            src: featureStory.img.tablet,
+            alt: "",
+            position: "Background",
+            loading: "eager",
+            width: 768,
+            height: 650,
+          },
+          {
+            size: "sm",
+            src: featureStory.img.mobile,
+            width: 375,
+            height: 317,
+            alt: "",
+            position: "Background",
+            loading: "eager",
+          },
         ]}
       >
         <div className={styles.feature}>

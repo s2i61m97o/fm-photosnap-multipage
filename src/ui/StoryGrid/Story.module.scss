@@ -19,6 +19,7 @@
   min-height: 450px;
   overflow: hidden;
   transition: all 250ms linear;
+  z-index: 1;
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
@@ -31,7 +32,7 @@
     inset-inline: 0;
     opacity: 0;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     transition: all 250ms linear;
     @media (prefers-reduced-motion: reduce) {
       transition: none;
