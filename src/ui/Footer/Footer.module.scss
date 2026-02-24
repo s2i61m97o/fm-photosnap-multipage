@@ -11,7 +11,7 @@
 
   @include mq.sm {
     grid-template-columns: max-content auto max-content;
-    grid-template-rows: repeat(2, max-content);
+    grid-template-rows: repeat(3, auto);
     justify-items: start;
     padding: v.$sp-800 v.$sp-500;
     column-gap: 0;
@@ -42,8 +42,11 @@
   }
 
   @include mq.sm {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 3 / 1 / 4 / 2;
     align-self: end;
+  }
+  @include mq.lg {
+    grid-row: 2/3;
   }
 }
 
@@ -101,7 +104,11 @@
   @include t.preset5r;
   @include mq.sm {
     grid-column: 3/4;
+    grid-row: 3/4;
     justify-self: end;
     align-self: end;
+  }
+  @include mq.lg {
+    grid-row: 2/3;
   }
 }
