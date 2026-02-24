@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 7fr 8fr 7fr;
     grid-template-rows: 1fr;
+    position: relative;
   }
 
   img {
@@ -24,7 +25,8 @@
 
   &:first-child,
   &:last-child {
-    img {
+    .article__imgLandscape,
+    .article__imgPortrait {
       justify-self: end;
       grid-column: 3 / 4;
       @include mq.lg {
@@ -47,10 +49,12 @@
 
 .hero {
   background-color: v.$neutral-950;
+  position: relative;
 }
 
 .article__imgLandscape {
   height: auto;
+  position: relative;
   @include mq.sm {
     display: none;
   }
@@ -61,11 +65,23 @@
 .article__imgPortrait {
   display: none;
   height: auto;
+  position: relative;
   @include mq.sm {
     display: inline;
   }
   @include mq.lg {
     display: none;
+  }
+}
+
+.article__imgBackground {
+  // display: none;
+  object-position: top;
+  object-fit: cover;
+  @include mq.sm {
+    display: block;
+    grid-column: 1 / 4;
+    position: absolute;
   }
 }
 
@@ -124,7 +140,6 @@
   button {
     color: v.$neutral-0;
   }
-
   &::before {
     content: "";
     background: v.$g-6;
@@ -132,6 +147,7 @@
     height: 6px;
     top: 0;
     position: absolute;
+    z-index: 0;
 
     @include mq.sm {
       inset-inline: unset;
@@ -140,5 +156,11 @@
       left: 0;
       width: 6px;
     }
+  }
+}
+
+.hero__removeColor::before {
+  @include mq.sm {
+    display: none;
   }
 }

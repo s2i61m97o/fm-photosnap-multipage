@@ -31,17 +31,17 @@ export default function Header() {
         >
           <ul className={styles.dropdown__list}>
             <li>
-              <Link href="" className={styles.dropdown__link}>
+              <Link href="/stories" className={styles.dropdown__link}>
                 <span className="visually-hidden">go to all </span>stories
               </Link>
             </li>
             <li>
-              <Link href="" className={styles.dropdown__link}>
+              <Link href="/features" className={styles.dropdown__link}>
                 <span className="visually-hidden">check out our </span>features
               </Link>
             </li>
             <li>
-              <Link href="" className={styles.dropdown__link}>
+              <Link href="/pricing" className={styles.dropdown__link}>
                 <span className="visually-hidden">see our </span>pricing
               </Link>
             </li>

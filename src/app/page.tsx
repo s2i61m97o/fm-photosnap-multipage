@@ -6,9 +6,9 @@ import designedImgLand from "../../public/images/home/desktop/designed-for-every
 import createImgPortrait from "../../public/images/home/tablet/create-and-share.jpg";
 import beautifulImgPortrait from "../../public/images/home/tablet/beautiful-stories.jpg";
 import designedImgPortrait from "../../public/images/home/tablet/designed-for-everyone.jpg";
-import StoryCard from "../ui/StoryCard/StoryCard";
 import FeatureGrid from "@/ui/FeatureGrid/FeatureGrid";
 import Article from "@/ui/Article/Article";
+import StoryGrid from "@/ui/StoryGrid/StoryGrid";
 
 export default function Home() {
   return (
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       <section className={styles.stories}>
-        <StoryCard amount={4} />
+        <StoryGrid displayNum={4} />
       </section>
       <section className={styles.features}>
         <FeatureGrid displayNum={3} />

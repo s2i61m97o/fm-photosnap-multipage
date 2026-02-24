@@ -1,6 +1,18 @@
 @use "../../styles/sass/variables" as v;
-@use "../../styles/sass/typography" as t;
 @use "../../styles/sass/breakpoints" as mq;
+@use "../../styles/sass/typography" as t;
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mq.sm {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mq.lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 .card {
   position: relative;
@@ -42,7 +54,6 @@
 .card_img {
   aspect-ratio: 1/1;
   position: absolute;
-  object-fit: cover;
   object-position: bottom;
   z-index: 0;
 }
