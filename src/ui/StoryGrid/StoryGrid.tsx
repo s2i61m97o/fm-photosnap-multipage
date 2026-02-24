@@ -13,7 +13,7 @@ export default function StoryGrid({displayNum}: {displayNum: number}) {
   return (
     <div className={styles.stories}>
       {storyData.map((story, index) => {
-        if (index < numToDisplay && index > 0)
+        if (index <= numToDisplay && index > 0)
           return (
             <StoryCard
               key={story.title}
