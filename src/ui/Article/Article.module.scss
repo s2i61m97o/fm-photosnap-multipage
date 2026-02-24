@@ -15,18 +15,11 @@
 
 .article__imageRight {
   grid-template-areas: "content img";
-  grid-template-columns: 7fr 3fr;
-
-  @include mq.lg {
-    grid-template-columns: 6fr 4fr;
-  }
+  grid-template-columns: auto max-content;
 }
 .article__imageLeft {
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: max-content auto;
   grid-template-areas: "img content";
-  @include mq.lg {
-    grid-template-columns: 4fr 6fr;
-  }
 }
 
 .article__imageBackground {
@@ -96,7 +89,6 @@
   p {
     color: rgb(from v.$neutral-950 r g b / 0.6);
     margin-block: v.$sp-200 v.$sp-300;
-    text-wrap: balance;
     @include t.preset5r;
   }
 
