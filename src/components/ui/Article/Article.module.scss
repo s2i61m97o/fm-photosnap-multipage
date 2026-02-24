@@ -1,9 +1,11 @@
-@use "../../styles/sass/variables" as v;
-@use "../../styles/sass/typography" as t;
-@use "../../styles/sass/breakpoints" as mq;
+@use "../../../styles/sass/variables" as v;
+@use "../../../styles/sass/typography" as t;
+@use "../../../styles/sass/breakpoints" as mq;
 
 .article {
   background-color: v.$neutral-0;
+  max-width: 100vw;
+  overflow: hidden;
   @include mq.sm {
     display: grid;
   }

@@ -1,6 +1,6 @@
-@use "../../styles/sass/variables" as v;
-@use "../../styles/sass/breakpoints" as mq;
-@use "../../styles/sass/typography" as t;
+@use "../../../styles/sass/variables" as v;
+@use "../../../styles/sass/breakpoints" as mq;
+@use "../../../styles/sass/typography" as t;
 
 .features__container {
   padding: clamp(v.$sp-900, 2.1145rem + 10.1781vw, v.$sp-1400)

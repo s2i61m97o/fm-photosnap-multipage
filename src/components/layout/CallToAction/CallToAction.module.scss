@@ -1,0 +1,57 @@
+@use "../../../styles/sass/variables" as v;
+@use "../../../styles/sass/typography" as t;
+@use "../../../styles/sass/breakpoints" as mq;
+
+.cta {
+  background-image: url("/images/shared/mobile/bg-beta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: v.$neutral-0;
+  display: grid;
+  gap: v.$sp-300;
+  padding: v.$sp-800 clamp(v.$sp-400, 0.5458rem + 4.0712vw, v.$sp-500);
+  position: relative;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    background: v.$g-6;
+    inset-inline: v.$sp-375 60%;
+    height: 6px;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+
+    @include mq.sm {
+      inset-inline: unset;
+      inset-block: 0;
+      height: unset;
+      left: 0;
+      width: 6px;
+    }
+  }
+  @include mq.sm {
+    grid-template-columns: 400px auto;
+  }
+  @include mq.md {
+    background-image: url("/images/shared/tablet/bg-beta.jpg");
+    padding-inline: clamp(v.$sp-500, -6.0714rem + 17.8571vw, v.$sp-2000);
+  }
+  @include mq.lg {
+    background-image: url("/images/shared/desktop/bg-beta.jpg");
+  }
+}
+
+.cta__text {
+  @include t.heading;
+}
+
+.cta__link {
+  align-items: center;
+  color: v.$neutral-0;
+  display: flex;
+  gap: v.$sp-200;
+  text-decoration: none;
+  @include mq.sm {
+    justify-self: end;
+  }
+}
