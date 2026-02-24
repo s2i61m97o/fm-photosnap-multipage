@@ -25,10 +25,10 @@ export default function Footer() {
       </div>
       <div className={styles.nav}>
         <ul className={styles.nav__list}>
-          <Link href="">home</Link>
-          <Link href="">stories</Link>
-          <Link href="">features</Link>
-          <Link href="">pricing</Link>
+          <Link href="/">home</Link>
+          <Link href="/stories">stories</Link>
+          <Link href="/features">features</Link>
+          <Link href="/pricing">pricing</Link>
         </ul>
       </div>
       <Link href="" className={styles.footer__cta}>

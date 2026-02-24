@@ -96,6 +96,7 @@
   p {
     color: rgb(from v.$neutral-950 r g b / 0.6);
     margin-block: v.$sp-200 v.$sp-300;
+    text-wrap: balance;
     @include t.preset5r;
   }
 

@@ -1,0 +1,16 @@
+@use "../../styles/sass/variables" as v;
+@use "../../styles/sass/breakpoints" as mq;
+@use "../../styles/sass/typography" as t;
+
+.features__container {
+  padding: clamp(v.$sp-900, 2.1145rem + 10.1781vw, v.$sp-1400)
+    clamp(v.$sp-400, 1.5229rem + 2.0356vw, v.$sp-500);
+  max-width: 500px;
+  margin-inline: auto;
+  @include mq.md {
+    max-width: clamp(43.25rem, 13.3929rem + 62.2024vw, 69.375rem);
+    padding-inline: 0;
+    margin-inline: auto;
+    padding-block: clamp(v.$sp-1400, 3.5714rem + 7.1429vw, v.$sp-2000);
+  }
+}
