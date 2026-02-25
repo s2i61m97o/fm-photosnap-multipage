@@ -125,6 +125,7 @@
   &::before {
     content: "";
     background: v.$g-6;
+
     inset-inline: v.$sp-375 60%;
     height: 6px;
     top: 0;
@@ -133,7 +134,7 @@
 
     @include mq.sm {
       inset-inline: unset;
-      inset-block: 0;
+      inset-block: v.$sp-900;
       height: unset;
       left: 0;
       width: 6px;
