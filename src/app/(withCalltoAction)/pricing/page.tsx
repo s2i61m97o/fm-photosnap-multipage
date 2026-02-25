@@ -1,8 +1,63 @@
+"use client";
 import Article from "@/components/ui/Article/Article";
 import {Images} from "@/assets/images/pricing";
 import Toggle from "@/components/ui/Toggle/Toggle";
+import styles from "./page.module.scss";
+import {useState} from "react";
+import clsx from "clsx";
+import PlanCard from "@/components/ui/PlanCard/PlanCard";
+import pricing from "@/data/pricing.json";
+
+type BillingPeriod = "monthly" | "yearly";
+interface PlanFeatures {
+  "unlimited-story-posting": boolean;
+  "unlimited-photo-upload": boolean;
+  "embedding-custom-content": boolean;
+  "customize-metadata": boolean;
+  "advanced-metrics": boolean;
+  "photo-downloads": boolean;
+  "search-engine-indexing": boolean;
+  "custom-analytics": boolean;
+}
+
+interface Pricing {
+  title: string;
+  description: string;
+  price: {
+    monthly: string;
+    yearly: string;
+  };
+  featured: boolean;
+  planFeatures: PlanFeatures;
+}
 
 export default function Pricing() {
+  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly");
+
+  function onToggle() {
+    setBillingPeriod((prev) => {
+      return prev === "yearly" ? "monthly" : "yearly";
+    });
+  }
+
+  const featureKeys = Object.keys(pricing[0].planFeatures) as Array<
+    keyof PlanFeatures
+  >;
+  const featureCards = featureKeys.map((feature) => {
+    return (
+      <div key={feature}>
+        <h5>{feature.replaceAll("-", " ").toUpperCase()}</h5>
+        {pricing.map((plan, index) => {
+          return (
+            <div key={index}>
+              <p>{plan.title}</p>
+              <p>{plan.planFeatures[feature] ? "Yes" : "No"}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
+  });
   return (
     <>
       <Article
@@ -29,6 +84,40 @@ export default function Pricing() {
           </p>
         </>
       </Article>
+      <section className={styles.plans}>
+        <div className={styles.plans__toggle}>
+          <span
+            className={clsx(
+              billingPeriod === "monthly" && styles.toggle__textActive,
+            )}
+          >
+            monthly
+          </span>
+          <Toggle onToggle={onToggle} />
+          <span
+            className={clsx(
+              billingPeriod === "yearly" && styles.toggle__textActive,
+            )}
+          >
+            yearly
+          </span>
+        </div>
+        <div className={styles.pricing__plans}>
+          {pricing.map((plan) => {
+            return (
+              <PlanCard
+                key={plan.title}
+                title={plan.title}
+                description={plan.description}
+                price={plan.price}
+                billingPeriod={billingPeriod}
+                featureCard={plan.featured}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section style={{marginBlock: "10rem"}}>{featureCards}</section>
     </>
   );
 }

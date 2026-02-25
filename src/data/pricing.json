@@ -1,0 +1,59 @@
+[
+  {
+    "title": "basic",
+    "description": "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+    "price": {
+      "monthly": "19.00",
+      "yearly": "199.00"
+    },
+    "featured": false,
+    "planFeatures": {
+      "unlimited-story-posting": true,
+      "unlimited-photo-upload": true,
+      "embedding-custom-content": false,
+      "customize-metadata": false,
+      "advanced-metrics": false,
+      "photo-downloads": false,
+      "search-engine-indexing": false,
+      "custom-analytics": false
+    }
+  },
+  {
+    "title": "pro",
+    "description": "More advanced features available. Recommended for photography veterans and professionals.",
+    "price": {
+      "monthly": "39.00",
+      "yearly": "399.00"
+    },
+    "featured": true,
+    "planFeatures": {
+      "unlimited-story-posting": true,
+      "unlimited-photo-upload": true,
+      "embedding-custom-content": true,
+      "customize-metadata": true,
+      "advanced-metrics": false,
+      "photo-downloads": false,
+      "search-engine-indexing": false,
+      "custom-analytics": false
+    }
+  },
+  {
+    "title": "business",
+    "description": "Additional features available such as more detailed metrics. Recommended for business owners.",
+    "price": {
+      "monthly": "99.00",
+      "yearly": "999.00"
+    },
+    "featured": false,
+    "planFeatures": {
+      "unlimited-story-posting": true,
+      "unlimited-photo-upload": true,
+      "embedding-custom-content": true,
+      "customize-metadata": true,
+      "advanced-metrics": true,
+      "photo-downloads": true,
+      "search-engine-indexing": true,
+      "custom-analytics": true
+    }
+  }
+]

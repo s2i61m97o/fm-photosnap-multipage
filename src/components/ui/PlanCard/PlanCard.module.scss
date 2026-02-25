@@ -1,0 +1,117 @@
+@use "../../../styles/sass/variables" as v;
+@use "../../../styles/sass/typography" as t;
+@use "../../../styles/sass/breakpoints" as mq;
+
+.card {
+  display: grid;
+  gap: v.$sp-500;
+  padding: v.$sp-600 v.$sp-400;
+  text-align: center;
+  @include mq.sm {
+    grid-template-columns: 1fr 1fr;
+    padding: v.$sp-500;
+    text-align: left;
+  }
+  @include mq.lg {
+    gap: v.$sp-400;
+    grid-template-columns: 1fr;
+    max-width: clamp(18.75rem, 11.0577rem + 12.0192vw, 21.875rem);
+    padding-block: v.$sp-600;
+    text-align: center;
+  }
+}
+
+.card__info {
+  display: grid;
+  gap: v.$sp-250;
+
+  h4 {
+    text-transform: capitalize;
+    @include t.preset3;
+  }
+  p {
+    @include t.preset5r;
+  }
+}
+
+.card__price {
+  @include mq.sm {
+    justify-self: end;
+  }
+  @include mq.lg {
+    justify-self: center;
+  }
+}
+
+.price__value {
+  @include t.preset1;
+}
+
+.price__period {
+  @include t.preset5r;
+}
+
+.card__btn {
+  border: none;
+  padding: v.$sp-150;
+  text-transform: uppercase;
+  @include t.preset7;
+}
+
+.cardStandard {
+  background-color: v.$neutral-300;
+
+  h3,
+  h4 {
+    color: v.$neutral-950;
+  }
+
+  p {
+    color: rgb(from v.$neutral-950 r g b/ 0.6);
+  }
+
+  .card__btn {
+    background-color: v.$neutral-950;
+    color: v.$neutral-0;
+  }
+}
+
+.cardFeature {
+  background-color: v.$neutral-950;
+  padding-block: v.$sp-1000;
+  position: relative;
+
+  h3,
+  h4 {
+    color: v.$neutral-0;
+  }
+
+  p {
+    color: rgb(from v.$neutral-0 r g b/ 0.6);
+  }
+
+  .card__btn {
+    background-color: v.$neutral-0;
+    color: v.$neutral-950;
+  }
+
+  &::before {
+    content: "";
+    background-image: v.$g-6;
+    height: 6px;
+    inset-block: 0;
+    inset-inline: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @include mq.sm {
+      height: unset;
+      width: 6px;
+    }
+    @include mq.lg {
+      height: 6px;
+      width: unset;
+    }
+  }
+}
