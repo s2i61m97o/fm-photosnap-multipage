@@ -7,6 +7,7 @@ import {useState} from "react";
 import clsx from "clsx";
 import PlanCard from "@/components/ui/PlanCard/PlanCard";
 import pricing from "@/data/pricing.json";
+import {Icons} from "@/components/ui/Icons";
 
 type BillingPeriod = "monthly" | "yearly";
 interface PlanFeatures {
@@ -45,17 +46,34 @@ export default function Pricing() {
   >;
   const featureCards = featureKeys.map((feature) => {
     return (
-      <div key={feature}>
-        <h5>{feature.replaceAll("-", " ").toUpperCase()}</h5>
-        {pricing.map((plan, index) => {
-          return (
-            <div key={index}>
-              <p>{plan.title}</p>
-              <p>{plan.planFeatures[feature] ? "Yes" : "No"}</p>
-            </div>
-          );
-        })}
-      </div>
+      <>
+        <div key={feature} role="row" className={styles.compare__row}>
+          <h5 className={styles.compare__feature} role="rowheader">
+            {feature.replaceAll("-", " ").toUpperCase()}
+          </h5>
+
+          {pricing.map((plan, index) => {
+            return (
+              <div key={index} className={styles.compare__data}>
+                <span className={styles.compare__plansSm} aria-hidden>
+                  {plan.title}
+                </span>
+                <p>
+                  {plan.planFeatures[feature] ? (
+                    <>
+                      <span className="visually-hidden">included</span>
+                      <Icons.Check />
+                    </>
+                  ) : (
+                    <span className="visually-hidden">not included</span>
+                  )}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <hr className={styles.compare__divider} />
+      </>
     );
   });
   return (
@@ -117,7 +135,20 @@ export default function Pricing() {
           })}
         </div>
       </section>
-      <section style={{marginBlock: "10rem"}}>{featureCards}</section>
+      <section role="table" className={styles.compare}>
+        <h2 className={styles.compare__title}>compare</h2>
+        <div className={styles.compare__header} role="rowgroup">
+          <span>the features</span>
+          {pricing.map((plan) => (
+            <span className={styles.compare__plansLg} role="columnheader">
+              {plan.title}
+            </span>
+          ))}
+        </div>
+        <hr className={styles.compare__headerDivider} />
+
+        <div role="rowgroup">{featureCards}</div>
+      </section>
     </>
   );
 }

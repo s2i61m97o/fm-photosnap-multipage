@@ -33,3 +33,108 @@
     overflow: hidden;
   }
 }
+
+.compare {
+  margin: v.$sp-800 clamp(v.$sp-400, 1.5229rem + 2.0356vw, v.$sp-500);
+  max-width: 730px;
+  @include mq.md {
+    margin-inline: auto;
+  }
+}
+
+.compare__title {
+  display: none;
+
+  @include t.heading;
+  @include mq.md {
+    display: block;
+    margin-block: v.$sp-800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.compare__header {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  padding-block-end: v.$sp-300;
+  text-transform: uppercase;
+  @include t.preset7;
+  @include mq.lg {
+    span:first-child {
+      padding-inline-start: v.$sp-300;
+    }
+  }
+}
+
+.compare__data {
+  @include mq.md {
+    justify-items: center;
+    justify-self: center;
+  }
+}
+
+.compare__plansLg {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  @include mq.md {
+    position: unset;
+    width: unset;
+    height: unset;
+    padding: 0;
+    margin: unset;
+    overflow: hidden;
+    clip: unset;
+    white-space: nowrap;
+    border: 0;
+    justify-self: center;
+  }
+}
+.compare__plansSm {
+  color: rgb(from v.$neutral-950 r g b / 0.5);
+  margin-block-end: v.$sp-100;
+  text-transform: uppercase;
+  @include t.preset8;
+  @include mq.md {
+    display: none;
+  }
+}
+
+.compare__feature {
+  @include t.preset7;
+  @include mq.md {
+    padding-inline-start: v.$sp-300;
+  }
+}
+
+.compare__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block: v.$sp-300;
+  row-gap: v.$sp-200;
+
+  h5 {
+    grid-column: span 3;
+  }
+
+  @include mq.md {
+    grid-template-columns: 2fr repeat(3, 1fr);
+    h5 {
+      grid-column: span 1;
+    }
+  }
+}
+
+.compare__divider {
+  border: 1px solid v.$neutral-300;
+}
+.compare__headerDivider {
+  border: 1px solid v.$neutral-950;
+}

@@ -13,6 +13,7 @@ import Pinterest from "./Pinterest";
 import Twitter from "./Twitter";
 import Youtube from "./Youtube";
 import Logo from "./Logo";
+import Check from "./Check";
 
 export const Icons = {
   Arrow,
@@ -30,6 +31,7 @@ export const Icons = {
   Twitter,
   Youtube,
   Logo,
+  Check,
 };
 
 export type IconKey = keyof typeof Icons;

@@ -49,6 +49,7 @@
 
   /* Font Size */
 
+  --font-xxs: 0.625rem;
   --font-xs: 0.75rem;
   --font-sm: 0.8125rem;
   --font-base: 0.9375rem;

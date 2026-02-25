@@ -58,3 +58,9 @@
   line-height: $lh-135;
   letter-spacing: $ls-02;
 }
+
+@mixin preset8 {
+  font-size: $font-xxs;
+  font-weight: $font-bold;
+  letter-spacing: $ls-02;
+}

@@ -1,18 +1,8 @@
-import checkDesktop from "./desktop/check.svg";
-
 import heroDesktop from "./desktop/hero.jpg";
 import heroTablet from "./tablet/hero.jpg";
 import heroMobile from "./mobile/hero.jpg";
 
 export const Images = {
-  check: [
-    {
-      size: "lg",
-      src: checkDesktop,
-      width: 830,
-      height: 650,
-    },
-  ],
   hero: [
     {
       size: "sm",
