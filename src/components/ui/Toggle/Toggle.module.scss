@@ -1,0 +1,58 @@
+@use "../../../styles/sass/variables" as v;
+@use "../../../styles/sass/typography" as t;
+@use "../../../styles/sass/breakpoints" as mq;
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+}
+
+/* Removing Checkboxes */
+.toggle__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Background of toggle */
+.toggle__thumb {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: v.$neutral-300;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 2rem;
+}
+
+/* Thumb */
+.toggle__thumb:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: v.$neutral-950;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* Change slider background color */
+.toggle__checkbox:checked + .toggle__thumb {
+  background-color: v.$neutral-950;
+}
+
+/* Thumb Movement and color change */
+.toggle__checkbox:checked + .toggle__thumb:before {
+  background-color: v.$neutral-300;
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}

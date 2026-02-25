@@ -24,13 +24,13 @@ export const Images = {
       size: "md",
       src: heroTablet,
       width: 273,
-      height: 650,
+      height: 490,
     },
     {
       size: "lg",
       src: heroDesktop,
       width: 830,
-      height: 650,
+      height: 490,
     },
   ],
 };
