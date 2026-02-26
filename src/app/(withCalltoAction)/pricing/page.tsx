@@ -108,14 +108,20 @@ export default function Pricing() {
             className={clsx(
               billingPeriod === "monthly" && styles.toggle__textActive,
             )}
+            aria-hidden
           >
             monthly
           </span>
-          <Toggle onToggle={onToggle} />
+          <Toggle
+            onToggle={onToggle}
+            label={`billing period, currently ${billingPeriod}`}
+            checked={billingPeriod === "yearly"}
+          />
           <span
             className={clsx(
               billingPeriod === "yearly" && styles.toggle__textActive,
             )}
+            aria-hidden
           >
             yearly
           </span>

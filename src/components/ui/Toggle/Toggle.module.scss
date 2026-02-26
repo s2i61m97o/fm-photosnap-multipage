@@ -52,7 +52,16 @@
 /* Thumb Movement and color change */
 .toggle__checkbox:checked + .toggle__thumb:before {
   background-color: v.$neutral-300;
-  -webkit-transform: translateX(30px);
-  -ms-transform: translateX(30px);
-  transform: translateX(30px);
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+.toggle__checkbox:focus-visible + .toggle__thumb:before {
+  outline: 5px v.$neutral-950 solid;
+  background-color: v.$neutral-0;
+}
+.toggle__checkbox:focus-visible:checked + .toggle__thumb:before {
+  outline: 5px v.$neutral-300 solid;
+  background-color: v.$neutral-0;
 }
