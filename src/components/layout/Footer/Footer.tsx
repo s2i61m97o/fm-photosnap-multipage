@@ -7,19 +7,19 @@ export default function Footer() {
     <section className={styles.footer}>
       <Icons.Logo classname={styles.footer__logo} />
       <div className={styles.footer__socials}>
-        <a aria-label="our facebook page">
+        <a href="" aria-label="our facebook page">
           <Icons.Facebook classname="facebook" />
         </a>
-        <a aria-label="our youtube channel">
+        <a href="" aria-label="our youtube channel">
           <Icons.Youtube />
         </a>
-        <a aria-label="our twitter feed">
+        <a href="" aria-label="our twitter feed">
           <Icons.Twitter />
         </a>
-        <a aria-label="our Pinterest page">
+        <a href="" aria-label="our Pinterest page">
           <Icons.Pinterest />
         </a>
-        <a aria-label="our Instagram profile">
+        <a href="" aria-label="our Instagram profile">
           <Icons.Instagram />
         </a>
       </div>

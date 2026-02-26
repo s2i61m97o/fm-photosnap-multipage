@@ -32,7 +32,8 @@
   gap: v.$sp-150;
   justify-content: center;
 
-  a:hover {
+  a:hover,
+  a:focus-visible {
     cursor: pointer;
     svg {
       path {
@@ -71,6 +72,13 @@
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus-visible {
+      text-decoration: underline;
+      outline-offset: 10px;
+    }
   }
   @include mq.sm {
     flex-direction: row;
@@ -95,6 +103,14 @@
     align-self: start;
     grid-area: 1/3/2/4;
     justify-self: end;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus-visible {
+    text-decoration: underline;
+    outline-offset: 10px;
   }
 }
 
