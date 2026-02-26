@@ -36,6 +36,7 @@ export default function Article({children, image, hero}: ArticleProps) {
           alt={img.alt}
           width={img.width}
           height={img.height}
+          loading={img.loading}
           className={clsx(
             styles[`img__${img.size}`],
             styles.article__img,

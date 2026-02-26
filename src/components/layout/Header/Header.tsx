@@ -44,7 +44,7 @@ export default function Header() {
         </div>
         <div
           className={clsx(styles.nav, open && styles.nav__contentOpen)}
-          aria-hidden={!open}
+          inert={!open}
         >
           <nav
             className={clsx(
