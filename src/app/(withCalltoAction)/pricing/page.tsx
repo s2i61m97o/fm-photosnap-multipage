@@ -46,8 +46,8 @@ export default function Pricing() {
   >;
   const featureCards = featureKeys.map((feature) => {
     return (
-      <>
-        <div key={feature} role="row" className={styles.compare__row}>
+      <span key={feature}>
+        <div role="row" className={styles.compare__row}>
           <h5 className={styles.compare__feature} role="rowheader">
             {feature.replaceAll("-", " ").toUpperCase()}
           </h5>
@@ -73,7 +73,7 @@ export default function Pricing() {
           })}
         </div>
         <hr className={styles.compare__divider} />
-      </>
+      </span>
     );
   });
   return (
@@ -140,7 +140,11 @@ export default function Pricing() {
         <div className={styles.compare__header} role="rowgroup">
           <span>the features</span>
           {pricing.map((plan) => (
-            <span className={styles.compare__plansLg} role="columnheader">
+            <span
+              key={plan.title}
+              className={styles.compare__plansLg}
+              role="columnheader"
+            >
               {plan.title}
             </span>
           ))}

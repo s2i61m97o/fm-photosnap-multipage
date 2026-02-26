@@ -21,8 +21,8 @@ export default function StoryCard({
   incDate = false,
 }: CardProps) {
   return (
-    <div className={styles.card}>
-      <a href="">
+    <a href="">
+      <div className={styles.card}>
         <Image
           src={img.desktop}
           alt=""
@@ -40,7 +40,7 @@ export default function StoryCard({
             read story <Icons.Arrow />
           </span>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   );
 }

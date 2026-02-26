@@ -10,7 +10,7 @@ export default function Check() {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
         d="M1 8.124L5.623 13 17 1"
       />
     </svg>
