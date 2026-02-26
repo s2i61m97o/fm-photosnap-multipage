@@ -40,8 +40,9 @@
   }
 
   &:hover,
-  &:focus-within {
+  &:focus-visible {
     cursor: pointer;
+    outline: none;
     transform: translateY(calc(-24px));
     &::after {
       opacity: 1;
