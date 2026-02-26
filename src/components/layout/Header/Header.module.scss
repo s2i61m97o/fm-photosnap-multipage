@@ -8,7 +8,7 @@
   margin-inline: auto;
   padding: v.$sp-350 v.$sp-300;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   @include mq.md {
     align-items: center;
     padding: v.$sp-200 v.$sp-500;
@@ -120,4 +120,19 @@
   &:focus-visible {
     outline-offset: 10px;
   }
+}
+
+.backgroundMask {
+  background-color: rgb(from v.$neutral-950 r g b / 0.75);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.backgroundMaskOpen {
+  display: block;
 }
