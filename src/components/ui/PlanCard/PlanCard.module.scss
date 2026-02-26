@@ -59,7 +59,7 @@
 }
 
 .cardStandard {
-  background-color: v.$neutral-300;
+  background-color: v.$neutral-100;
 
   h3,
   h4 {
@@ -73,6 +73,11 @@
   .card__btn {
     background-color: v.$neutral-950;
     color: v.$neutral-0;
+    &:hover {
+      cursor: pointer;
+      background-color: v.$neutral-300;
+      color: v.$neutral-950;
+    }
   }
 }
 
@@ -93,6 +98,11 @@
   .card__btn {
     background-color: v.$neutral-0;
     color: v.$neutral-950;
+    &:hover {
+      cursor: pointer;
+      background-color: v.$neutral-300;
+      color: v.$neutral-950;
+    }
   }
 
   &::before {
