@@ -26,7 +26,13 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.header__bar}>
-          <Icons.Logo />
+          <a
+            href="/"
+            className={styles.header__logo}
+            aria-label="Back to the homepage"
+          >
+            <Icons.Logo />
+          </a>
           <button
             aria-expanded={open}
             aria-label="toggle navigation menu"

@@ -33,6 +33,10 @@
   }
 }
 
+.header__logo:visited {
+  color: unset;
+}
+
 .header__button {
   background: none;
   border: none;
@@ -117,7 +121,11 @@
   cursor: pointer;
   color: initial;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
   &:focus-visible {
+    text-decoration: underline;
     outline-offset: 10px;
   }
 }
@@ -135,4 +143,7 @@
 
 .backgroundMaskOpen {
   display: block;
+  @include mq.md {
+    display: none;
+  }
 }
