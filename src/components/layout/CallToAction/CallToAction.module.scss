@@ -47,11 +47,16 @@
 
 .cta__link {
   align-items: center;
+  align-self: center;
   color: v.$neutral-0;
   display: flex;
+  height: fit-content;
   gap: v.$sp-200;
   text-decoration: none;
   @include mq.sm {
     justify-self: end;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }
