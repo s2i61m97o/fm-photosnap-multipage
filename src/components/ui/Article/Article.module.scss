@@ -17,10 +17,10 @@
 
 .article__imageRight {
   grid-template-areas: "content img";
-  grid-template-columns: auto max-content;
+  grid-template-columns: minmax(40%, 1fr) minmax(0, max-content);
 }
 .article__imageLeft {
-  grid-template-columns: max-content auto;
+  grid-template-columns: minmax(0, max-content) minmax(40%, 1fr);
   grid-template-areas: "img content";
 }
 
